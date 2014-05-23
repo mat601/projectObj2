@@ -87,9 +87,9 @@ section
 .menu li
 {
 	display: inline-block;
-	width: 200px;
+	width: 180px;
 	height: 40px;
-	margin:0 60px 0 20px; 
+	margin:0 55px 0 20px; 
 	padding:0;
 }
 
