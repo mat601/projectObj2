@@ -1,0 +1,3 @@
+Degree 6: Examining System
+
+Eiffel Compilation Succeeded

@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 13.11.9.3542 GPL Edition - windows">
+<meta name="description" content="Helper functions to provide property of a Unicode character of type CHARACTER_32. This includes finding out if a character is lower, upper, title case, or if it is a digit, a punctuation, a control or a space character."/>
+<meta name="generator" content="unicode_helper_generator"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="copyright" content="Copyright (c) 1984-2012, Eiffel Software and others"/>
+<meta name="license" content="Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"/>
+<meta name="source" content="Eiffel Software 5949 Hollister Ave., Goleta, CA 93117 USA Telephone 805-685-1006, Fax 805-685-6869 Website http://www.eiffel.com Customer support http://support.eiffel.com"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>character_property Contracts</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="character_property"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">Helper functions to provide property of a Unicode character of type CHARACTER_32.</SPAN>
+		<SPAN CLASS="estring">This includes finding out if a character is lower, upper, title case, or if it is a digit,</SPAN>
+		<SPAN CLASS="estring">a punctuation, a control or a space character.</SPAN>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+	<SPAN CLASS="eitag">generator</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;unicode_helper_generator&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date: 2013-05-20 16:15:17 -0700 (Mon, 20 May 2013) $&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision: 92557 $&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> <SPAN CLASS="ekeyword">interface</SPAN>
+	<A CLASS="eclass" HREF="../elks/character_property_short.html">CHARACTER_PROPERTY</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../elks/character_property_short.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Status report</SPAN>
+
+	<A NAME="f_is_alpha"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_alpha">is_alpha</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> an alphabetic character?</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN>
+			<SPAN CLASS="etag">definition</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_lower">is_lower</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">)</SPAN> <A CLASS="ekeyword" HREF="../elks/boolean_short.html#f_disjuncted">or</A> <A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_upper">is_upper</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+
+	<A NAME="f_is_lower"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_lower">is_lower</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a lower character?</SPAN>
+
+	<A NAME="f_is_upper"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_upper">is_upper</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> an upper character?</SPAN>
+
+	<A NAME="f_is_title"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_title">is_title</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a title character?</SPAN>
+
+	<A NAME="f_is_digit"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_digit">is_digit</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a digit character?</SPAN>
+
+	<A NAME="f_is_punctuation"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_punctuation">is_punctuation</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a punctuation character?</SPAN>
+
+	<A NAME="f_is_control"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_control">is_control</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a control character?</SPAN>
+
+	<A NAME="f_is_hexa_digit"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_hexa_digit">is_hexa_digit</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> an hexadecimal character?</SPAN>
+
+	<A NAME="f_is_space"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_is_space">is_space</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/boolean_short.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Is </SPAN>`a_char'<SPAN CLASS="ecomment"> a space character?</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants</SPAN>
+
+	<A NAME="f_max_ascii_value"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_max_ascii_value">Max_ascii_value</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/natural_32_short.html">NATURAL_32</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">127</SPAN>
+
+	<A NAME="f_max_latin1_value"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_max_latin1_value">Max_latin1_value</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/natural_32_short.html">NATURAL_32</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">255</SPAN>
+
+	<A NAME="f_max_unicode_value"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_max_unicode_value">Max_unicode_value</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/natural_32_short.html">NATURAL_32</A> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">1114111</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Various maximal value for character range.</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Conversion</SPAN>
+
+	<A NAME="f_to_lower"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_to_lower">to_lower</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Convert </SPAN>`a_char'<SPAN CLASS="ecomment"> to lower case.</SPAN>
+
+	<A NAME="f_to_upper"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_to_upper">to_upper</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Convert </SPAN>`a_char'<SPAN CLASS="ecomment"> to upper case.</SPAN>
+
+	<A NAME="f_to_title"></A><A CLASS="efeature" HREF="../elks/character_property_short.html#f_to_title">to_title</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_char</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../elks/character_32_short.html">CHARACTER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Convert </SPAN>`a_char'<SPAN CLASS="ecomment"> to title case.</SPAN>
+	
+<SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">copyright</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Copyright (c) 1984-2012, Eiffel Software and others&quot;</SPAN>
+	<SPAN CLASS="eitag">license</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Eiffel Forum License v2 (see </SPAN><A CLASS="estring" HREF="http://www.eiffel.com/licensing/forum.txt">http://www.eiffel.com/licensing/forum.txt</A><SPAN CLASS="estring">)&quot;</SPAN>
+	<SPAN CLASS="eitag">source</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">Eiffel Software</SPAN>
+		<SPAN CLASS="estring">5949 Hollister Ave., Goleta, CA 93117 USA</SPAN>
+		<SPAN CLASS="estring">Telephone 805-685-1006, Fax 805-685-6869</SPAN>
+		<SPAN CLASS="estring">Website </SPAN><A CLASS="estring" HREF="http://www.eiffel.com">http://www.eiffel.com</A>
+		<SPAN CLASS="estring">Customer support </SPAN><A CLASS="estring" HREF="http://support.eiffel.com">http://support.eiffel.com</A>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../elks/character_property_short.html">CHARACTER_PROPERTY</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property.html">Text</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_flat.html">Flat</A></TD>
+<TD CLASS="nolink2">Contracts</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="character_property_flatshort.html">Flat contracts</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="character_property"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

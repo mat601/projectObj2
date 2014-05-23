@@ -1,0 +1,169 @@
+ @charset "UTF-8";
+ body
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	background-color: #234;
+	}
+	
+h1
+{
+	color: #7B68EE;
+	position: absolute;
+	left: 580px;
+	top: 220px;
+	margin: 0;
+	padding: 0;
+}
+	
+h2
+{
+	font-size: 20px;
+	color: #8FCF3C   
+}
+	
+h3
+{
+	color: #7B68EE;
+	padding: 0;
+	margin: 0;
+	font-size: 25px;
+}
+ 
+header
+{
+	padding:0px;
+	width: 98%;
+	height: 200px;
+	margin: 0 0 40px 0;
+
+}
+
+.banniere
+{
+	width: 83%;
+	margin: 0 0 0 132px;
+}
+
+a
+{
+	margin-right: 50px;
+	font-style: underline;
+	color: green;
+	font-size: 19px;S
+}
+
+a:visited
+{	
+	color: #FAA;
+}
+
+footer
+{	
+	width: 98%;
+	height: 100px;
+	text-align : center ;
+	color: lightBlue;
+}
+
+section
+{
+	margin: 0 0 5px 160px;
+	padding: 5px;
+	width: 80%;
+	min-height:600px;
+}
+
+.menu
+{
+	list-style-type:none;  
+	margin:0 0 0 9%; 
+	padding:0;
+	width: 85%;
+	height: 40px;
+	background-color: #AAF;
+}
+.menu li
+{
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	margin:0 60px 0 20px; 
+	padding:0;
+}
+
+.menu li a
+{
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+	height: 40px;
+	width: 250px;
+	margin:0; 
+	padding:0;
+	color: black;
+}
+
+li
+{
+	height: 25px;
+	font-size: 17px;
+	color: #669933;
+}
+
+.menu li:hover 
+{
+	background-color: #666;
+}
+
+p
+{
+	font-size: 30px;
+}
+
+.text
+{
+	display: inline-block;
+	max-width: 1000px;
+	margin:0;
+	padding:0;
+	font-size: 19px;
+	color: green;
+}
+
+a:active
+{
+	color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
